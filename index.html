@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Portfolio</title>
+    <link rel="icon" type="image/png" href="logo.png"> <!-- Changes the icon in the browser tab -->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: url("background.jpg") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links li a:hover {
+            text-decoration: underline;
+            color: #ff9900;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 20px;
+            width: 80%;
+            margin: 40px auto;
+        }
+
+        .profile-pic {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        .highlight {
+            color: #ff6600;
+        }
+
+        .h2 {
+            text-align: center;
+            color: #222;
+        }
+
+        section {
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 40px auto;
+            width: 80%;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .works-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .work-item {
+            text-align: center;
+        }
+
+        .work-item img {
+            width: 250px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .work-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            width: 80%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e65c00;
+        }
+
+        footer {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="logo.png" alt="Student Logo" class="logo">
+            <ul class="nav-links"> 
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#works">My Works</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="icon.png" alt="Profile Picture" class="profile-pic">
+        <h1>Hello, I'm <span class="highlight">Gurvinder Singh Virk</span></h1>
+        <p>Aspiring Web Developer</p>
+    </section>
+
+    <section id="about">
+        <h2 class="h2">About Me</h2>
+        <p>Hi! I'm Gurvinder, a student passionate about technology, especially in web development. I enjoy creating simple and creative websites. In my free time, I explore new coding tricks and design tools.</p>
+    </section>
+
+    <section id="works">
+        <h2 class="h2">My Works</h2>
+        <div class="works-gallery">
+
+            <div class="work-item">
+                <a href="https://tinyurl.com/Q1Drill1Sample" target="blank">
+                    <img src="Work1.png" alt="Sample Work" style="border: 2px dashed black;">
+                </a>
+                <p>My Personal Slambook</p>
+            </div>
+
+            <div class="work-item">
+                <ul>
+                    <li>✔ HTML & CSS Projects</li>
+                    <li>✔ Personal Blog</li>
+                    <li>✔ School Portfolio</li>
+                </ul>
+            </div>
+
+            <div class="work-item">
+                <a href="https://tinyurl.com/ICT9Q1SW1Sample" target="blank">
+                    <img src="Work2.png" alt="Sample Work" style="border: 2px dashed black;">
+                </a>
+                <p>My Top 3 Best Movies</p>
+            </div>
+
+            <div class="work-item">
+                <ul>
+                    <li>✔ HTML & CSS Projects</li>
+                    <li>✔ HTML Forms</li>
+                    <li>✔ Lists, Links, and Images</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="h2">Contact Me</h2>
+        <div class="form-container">
+            <form>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="jane_doe@gmail.com" required>
+
+                <label>How did you find me?</label><br>
+                <input type="radio" id="rate1" name="rating" value="1" required>
+                <label for="rate1">Facebook</label>
+                <input type="radio" id="rate2" name="rating" value="2">
+                <label for="rate2">Google</label>
+                <input type="radio" id="rate3" name="rating" value="3">
+                <label for="rate3">Friends</label>
+                <br><br>
+
+                <label>Services Interested In:</label><br>
+                <input type="checkbox" id="action" name="genre" value="Web Design">
+                <label for="action">Web Design</label>
+                <input type="checkbox" id="comedy" name="genre" value="Graphic Design">
+                <label for="comedy">Graphic Design</label>
+                <input type="checkbox" id="drama" name="genre" value="Robotics">
+                <label for="drama">Robotics</label>
+                <br><br>
+
+                <label for="platform">Rate my Portfolio:</label>
+                <select id="platform" name="platform" required>
+                    <option value="">-- Select Rating --</option>
+                    <option value="1">🍓</option>
+                    <option value="2">🍓🍓</option>
+                    <option value="3">🍓🍓🍓</option>
+                    <option value="4">🍓🍓🍓🍓</option>
+                    <option value="5">🍓🍓🍓🍓🍓</option>
+                </select>
+                <br><br>
+
+                <label for="reason">Any Feedback?</label>
+                <textarea id="reason" name="reason" rows="4" placeholder="feedback here..." required></textarea>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Gurvinder Singh Virk. All rights reserved.</p>
+    </footer>
+</body>
+</html>
